@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flex Grow</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .container {
+                display: flex;
+                border: 2px solid violet;
+                height: 80px;
+            }
+            .box {
+                flex-basis: 100px;
+                border: 1px solid black;
+            }
+            .grow {
+                width: 600px;
+            }
+            .box1 {
+                flex-grow: 1;
+            }
+            .box2 {
+                flex-grow: 4;
+            }
+            .box3 {
+                flex-grow: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container grow">
+            <div class="box box1">1</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+        </div>
+    </body>
+</html>
