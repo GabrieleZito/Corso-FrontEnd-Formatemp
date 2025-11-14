@@ -32,14 +32,12 @@
             align-items: center;
             background-color: orange;
             flex-grow: 1;
-            text-align: center;
         }
         .center {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-grow: 3;
-            text-align: center;
         }
         .right {
             display: flex;
@@ -47,7 +45,6 @@
             align-items: center;
             background-color: green;
             flex-grow: 1;
-            text-align: center;
         }
         footer {
             background-color: aquamarine;
@@ -66,6 +63,9 @@
             .center,
             .right {
                 flex-grow: 1;
+            }
+            .center {
+                order: -1;
             }
         }
         @media (min-width: 769px) and (max-width: 1024px) {
