@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Esercizio Completo</title>
+        <link rel="stylesheet" href="./css/index.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div id="form">
+                <div id="div1"><label for="nome">Nome</label></div>
+                <div id="div2"><input type="text" id="nome" /></div>
+                <div id="div3"><label for="eta">Età</label></div>
+                <div id="div4"><input type="number" id="eta" /></div>
+                <div id="div5"><label for="job">Professione</label></div>
+                <div id="div6"><input type="text" id="job" /></div>
+            </div>
+
+            <button onclick="invia()" >Invia</button>
+            <div>
+                <button id="showBtn">Mostra Utenti</button>
+                <button onclick="debugUtenti()">Debug</button>
+                <button id="filterBtn">Filtro 18+</button>
+            </div>
+            <div id="lista" style="display: flex; flex-direction: column"></div>
+        </div>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
