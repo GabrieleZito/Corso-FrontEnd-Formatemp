@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calcolatrice</title>
+        <link rel="stylesheet" href="./css/index.css" />
+    </head>
+    <body>
+        <div id="calc">
+            <div id="div1">
+                <input type="number" id="num1" placeholder="Primo numero" />
+                <input type="number" id="num2" placeholder="Secondo numero" />
+            </div>
+            <div id="div2"><button onclick="calcola('+')">Somma</button></div>
+            <div id="div3"><button onclick="calcola('-')">Sottrai</button></div>
+            <div id="div4"><button onclick="calcola('*')">Moltiplica</button></div>
+            <div id="div5"><button onclick="calcola('/')">Dividi</button></div>
+        </div>
+        <p id="risultato"></p>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
