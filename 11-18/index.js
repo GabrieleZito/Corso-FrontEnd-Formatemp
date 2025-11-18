@@ -19,3 +19,14 @@ const ai = document.querySelectorAll("a[href^='#']");
 for (const e of ai) {
     console.log(e);
 }
+
+const contenuto = document.querySelector("#contenuto");
+
+console.log("Il padre di #contenuto è: ");
+console.log(contenuto.parentElement);
+
+console.log("i figli diretti: ");
+console.log(contenuto.children);
+
+console.log("Il fratello:");
+console.log(contenuto.nextElementSibling || "Non ha fratelli");
