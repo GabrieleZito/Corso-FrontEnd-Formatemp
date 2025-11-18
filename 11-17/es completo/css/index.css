@@ -7,6 +7,14 @@
     align-items: center;
     gap: 10px;
 }
+
+#card {
+    height: calc(min-content + 2px);
+    padding: 4px;
+    background-color: aliceblue;
+    margin-bottom: 2px;
+}
+
 #form {
     display: grid;
     grid-template-rows: repeat(6, 1fr);

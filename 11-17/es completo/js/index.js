@@ -30,7 +30,7 @@ function creaUtente(nome, eta, professione = "non specificata") {
 }
 
 const generaMessaggio = (utente) => {
-    return `<div>${utente.nome} ha ${utente.eta} ed è classificato come ${utente.categoria}</div>`;
+    return `<div id="card">${utente.nome} ha ${utente.eta} anni ed è classificato come ${utente.categoria}</div>`;
 };
 
 const mostraUtenti = (users) => {
@@ -52,6 +52,7 @@ function debugUtenti() {
         }
         console.log("---------------------------------");
     }
+    
 }
 
 function invia() {
