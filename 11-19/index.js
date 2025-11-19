@@ -14,6 +14,7 @@ addBtn.addEventListener("click", () => {
         del.style.textDecoration = "none";
         del.addEventListener("click", () => {
             li.remove();
+            checkEmptyList();
         });
 
         li.addEventListener("click", () => {
@@ -31,6 +32,7 @@ addBtn.addEventListener("click", () => {
         li.appendChild(del);
         ul.appendChild(li);
         input.value = "";
+        checkEmptyList();
     }
 });
 
@@ -57,3 +59,13 @@ filterBtn.addEventListener("click", () => {
 clearBtn.addEventListener("click", () => {
     ul.innerHTML = "";
 });
+
+function checkEmptyList() {
+    const p = document.querySelector("#message");
+    const items = document.querySelectorAll("li");
+    if (items.length < 1) {
+        p.textContent = "Nessun Elemento aggiunto";
+    } else {
+        p.textContent = "";
+    }
+}
