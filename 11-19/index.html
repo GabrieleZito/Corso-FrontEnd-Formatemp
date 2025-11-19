@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <h1>Todo list</h1>
+        <div style="display: flex; flex-direction: row; justify-content: space-between">
+            <div>
+                <input type="text" />
+                <button class="addBtn">Aggiungi</button>
+            </div>
+            <div>
+                <select name="filter-opt" id="filter-select">
+                    <option value="all">Mostra Tutto</option>
+                    <option value="completed">Mostra solo completati</option>
+                </select>
+                <button id="filter-btn">Filtra</button>
+            </div>
+            <button id="clear-btn">Svuota tutto</button>
+        </div>
+        <ul class="lista"></ul>
+
+        <script src="./index.js"></script>
+    </body>
+</html>
