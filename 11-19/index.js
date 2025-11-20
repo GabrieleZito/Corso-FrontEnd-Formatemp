@@ -7,6 +7,7 @@ const clearBtn = document.querySelector("#clear-btn");
 addBtn.addEventListener("click", () => {
     if (input.value) {
         const li = document.createElement("li");
+        const div = document.createElement("div");
         const p = document.createElement("p");
         const del = document.createElement("button");
 
