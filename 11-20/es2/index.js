@@ -1,4 +1,4 @@
-const colors = ["red", "aqua", "green", "black", "blue", "blueviolet", "orange", "gray", "yellow"];
+const colors = ["red", "cyan", "green", "black", "blue", "purple", "orange", "gray", "yellow"];
 const secret = colors[Math.floor(Math.random() * colors.length)];
 console.log(secret);
 
