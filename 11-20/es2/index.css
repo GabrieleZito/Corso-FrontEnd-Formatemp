@@ -1,0 +1,16 @@
+.container {
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.colors {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    flex-wrap: wrap;
+}
