@@ -1,0 +1,26 @@
+@import "./card.css";
+@import "./cart.css";
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: aquamarine;
+}
+
+main {
+    width: 70vw;
+    margin: auto;
+    background-color: azure;
+}
+
+.catalog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
