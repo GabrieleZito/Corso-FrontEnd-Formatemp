@@ -1,8 +1,8 @@
 @import "./card.css";
 @import "./cart.css";
 
-
 nav {
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;

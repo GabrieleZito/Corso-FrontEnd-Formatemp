@@ -1,4 +1,4 @@
-const cart = [];
+let cart = [];
 const catalog = [
     { id: crypto.randomUUID(), name: "Wireless Mouse", price: 25, category: "Electronics", img: "https://placehold.co/200" },
     { id: crypto.randomUUID(), name: "Mechanical Keyboard", price: 80, category: "Electronics", img: "https://placehold.co/200" },
@@ -83,11 +83,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
     showCatalog();
 });
 
-const cartBtn = document.querySelector(".cartBtn");
+//CARRELLO
+const cartBtn = document.querySelector(".CartBtn");
 cartBtn.addEventListener("click", () => {
-    
-})
+    console.log("click");
+    const cartDiv = document.querySelector(".cart");
+    cartDiv.style.right = "0";
+});
 
+const addToCart = (id) => {
+    if (!cart.find((i) => i.id == id)) {
+        cart.push({ id: id, quantity: 1 });
+    } else {
+        cart = cart.map((c) =>
+            c.id == id
+                ? {
+                      ...c,
+                      quantity: c.quantity + 1,
+                  }
+                : c
+        );
+    }
+    console.log(cart);
+};
+
+//CATALOGO
 function showCatalog() {
     const catalogDiv = document.querySelector(".catalog");
     catalog.forEach((p) => {
@@ -100,10 +120,10 @@ function showCatalog() {
 function generateCard({ id, name, price, category, img }) {
     return `
         <div class="product-card" data-id = ${id}>
-            <img src=${img} alt="Prodotto" class="product-img" />
+            <img src=${img} alt=${name} class="product-img" />
             <h3 class="product-name">${name}</h3>
             <p class="product-price">€ ${price}</p>
-            <button class="add-cart-btn">Aggiungi al carrello</button>
+            <button class="add-cart-btn" onclick="addToCart('${id}')">Aggiungi al carrello</button>
         </div>
     `;
 }

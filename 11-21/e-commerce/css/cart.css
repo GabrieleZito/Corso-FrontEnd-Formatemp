@@ -1,12 +1,15 @@
 .cartBtn {
+    animation-duration: 250ms;
 }
 
 .cart {
+    z-index: 5;
     position: fixed;
-    right: 0;
-    top: 0;
+    right: -400px;
+    top: 56px;
     height: 100vh;
     width: 20%;
     min-width: 200px;
+    max-width: 300px;
     background-color: blue;
 }
