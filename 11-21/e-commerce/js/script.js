@@ -205,10 +205,16 @@ function generateCard({ id, name, price, category, img }) {
 
 //FILTRI
 const searchInput = document.querySelector(".search-input");
+const selectCategory = document.querySelector(".styled-select");
 
 searchInput.addEventListener("input", (event) => {
     const search = event.target.value;
     //console.log(search);
 
     showCatalog(search, "All");
+});
+
+selectCategory.addEventListener("change", (event) => {
+    const category = event.target.value;
+    showCatalog("", category);
 });
