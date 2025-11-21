@@ -104,8 +104,40 @@ const addToCart = (id) => {
                 : c
         );
     }
-    console.log(cart);
+    //console.log(cart);
+    updateCart();
 };
+
+const updateCart = () => {
+    const cartItems = cart
+        .map((item) => {
+            const product = catalog.find((cat) => cat.id === item.id);
+            return product ? { ...product, quantity: item.quantity } : null;
+        })
+        .filter(Boolean);
+    console.log(cartItems);
+
+    const cartDiv = document.querySelector(".cart");
+    cartDiv.innerHTML = "";
+    cartItems.forEach((c) => {
+        const div = document.createElement("div");
+        div.innerHTML = generateCartCard(c);
+        cartDiv.appendChild(div);
+    });
+};
+
+function generateCartCard({ id, name, price, category, img, quantity }) {
+    return `
+        <div class="cart-item" data-it=${id}>
+            <img src=${img} alt=${name} class="cart-item-img">
+            <div class="cart-item-info">
+                <h4 class="cart-item-name">${name}</h4>
+                <p class="cart-item-qty">Quantità: ${quantity}</p>
+                <p class="cart-item-total">Totale: € ${quantity * price}</p>
+            </div>
+        </div>
+    `;
+}
 
 //CATALOGO
 function showCatalog() {
