@@ -11,7 +11,6 @@ const catalog = [
         category: "Electronics",
         img: "https://placehold.co/200",
     },
-
     { id: crypto.randomUUID(), name: "Smart LED Bulb", price: 18, category: "Home", img: "https://placehold.co/200" },
     { id: crypto.randomUUID(), name: "Ceramic Coffee Mug", price: 12, category: "Kitchen", img: "https://placehold.co/200" },
     {
@@ -29,7 +28,6 @@ const catalog = [
         img: "https://placehold.co/200",
     },
     { id: crypto.randomUUID(), name: "Bluetooth Speaker", price: 45, category: "Electronics", img: "https://placehold.co/200" },
-
     { id: crypto.randomUUID(), name: "Notebook A4", price: 6, category: "Stationery", img: "https://placehold.co/200" },
     {
         id: crypto.randomUUID(),
@@ -41,13 +39,11 @@ const catalog = [
     { id: crypto.randomUUID(), name: "Desk Organizer Tray", price: 15, category: "Office", img: "https://placehold.co/200" },
     { id: crypto.randomUUID(), name: "LED Desk Lamp", price: 32, category: "Office", img: "https://placehold.co/200" },
     { id: crypto.randomUUID(), name: "Ergonomic Office Chair", price: 160, category: "Office", img: "https://placehold.co/200" },
-
     { id: crypto.randomUUID(), name: "Cotton T-Shirt", price: 18, category: "Clothing", img: "https://placehold.co/200" },
     { id: crypto.randomUUID(), name: "Hoodie Sweatshirt", price: 40, category: "Clothing", img: "https://placehold.co/200" },
     { id: crypto.randomUUID(), name: "Baseball Cap", price: 15, category: "Clothing", img: "https://placehold.co/200" },
     { id: crypto.randomUUID(), name: "Running Shoes", price: 70, category: "Clothing", img: "https://placehold.co/200" },
     { id: crypto.randomUUID(), name: "Sunglasses", price: 30, category: "Accessories", img: "https://placehold.co/200" },
-
     { id: crypto.randomUUID(), name: "Toaster 2-Slice", price: 28, category: "Kitchen", img: "https://placehold.co/200" },
     { id: crypto.randomUUID(), name: "Electric Kettle", price: 25, category: "Kitchen", img: "https://placehold.co/200" },
     { id: crypto.randomUUID(), name: "Chef Knife 8-inch", price: 35, category: "Kitchen", img: "https://placehold.co/200" },
@@ -59,7 +55,6 @@ const catalog = [
         img: "https://placehold.co/200",
     },
     { id: crypto.randomUUID(), name: "Cutting Board Bamboo", price: 18, category: "Kitchen", img: "https://placehold.co/200" },
-
     { id: crypto.randomUUID(), name: "Backpack 20L", price: 45, category: "Outdoor", img: "https://placehold.co/200" },
     { id: crypto.randomUUID(), name: "Camping Flashlight", price: 20, category: "Outdoor", img: "https://placehold.co/200" },
     { id: crypto.randomUUID(), name: "Yoga Mat", price: 25, category: "Fitness", img: "https://placehold.co/200" },
@@ -177,11 +172,22 @@ function generateCartCard({ id, name, price, category, img, quantity }) {
 }
 
 //CATALOGO
-function showCatalog() {
+function showCatalog(search = "", category = "All") {
     const catalogDiv = document.querySelector(".catalog");
-    catalog.forEach((p) => {
+    catalogDiv.innerHTML = "";
+
+    const normalizedSearch = search.toLowerCase();
+
+    const filteredCatalog = catalog.filter((p) => {
+        const matchSearch = !search || p.name.toLowerCase().includes(normalizedSearch);
+        const matchCategory = category === "All" || p.category === category;
+
+        return matchSearch && matchCategory;
+    });
+
+    filteredCatalog.forEach((product) => {
         const div = document.createElement("div");
-        div.innerHTML = generateCard(p);
+        div.innerHTML = generateCard(product);
         catalogDiv.appendChild(div);
     });
 }
@@ -196,3 +202,13 @@ function generateCard({ id, name, price, category, img }) {
         </div>
     `;
 }
+
+//FILTRI
+const searchInput = document.querySelector(".search-input");
+
+searchInput.addEventListener("input", (event) => {
+    const search = event.target.value;
+    //console.log(search);
+
+    showCatalog(search, "All");
+});

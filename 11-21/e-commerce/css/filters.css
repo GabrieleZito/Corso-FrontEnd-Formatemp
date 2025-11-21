@@ -1,0 +1,56 @@
+.filters {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-input {
+    max-width: 100%;
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.25s ease;
+    background: #fafafa;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+    transform: scale(1.01);
+}
+
+.styled-select {
+    max-width: 100%;
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    background: #fafafa;
+    outline: none;
+    transition: all 0.25s ease;
+    appearance: none; /* nasconde freccia default */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center; /* posizione freccia */
+    background-size: 16px;
+}
+
+.styled-select:focus {
+    border-color: #007bff;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+    transform: scale(1.01);
+}
+
+.styled-select option {
+    padding: 10px;
+}

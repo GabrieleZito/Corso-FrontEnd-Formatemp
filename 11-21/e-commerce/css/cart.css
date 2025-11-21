@@ -1,4 +1,5 @@
 .cartBtn {
+    transition: all 0.25s ease;
     animation-duration: 250ms;
 }
 

@@ -1,5 +1,6 @@
 @import "./card.css";
 @import "./cart.css";
+@import "./filters.css";
 
 nav {
     z-index: 10;
