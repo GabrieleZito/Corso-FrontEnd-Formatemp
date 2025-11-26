@@ -11,7 +11,7 @@ function TodoForm({ setTodos }) {
     const [id, setId] = useState(0);
 
     const addTodo = () => {
-        setTodos((t) => [...t, { id: id, text: text, category: category }]);
+        setTodos((t) => [...t, { id: id, text: text, category: category, time: new Date }]);
         setId((i) => i + 1);
     };
 

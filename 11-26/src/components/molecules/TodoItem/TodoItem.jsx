@@ -8,6 +8,7 @@ export function TodoItem({ item }) {
         <div className="todoItem">
             <p>{item.text}</p>
             <div>
+                {item.time.getUTCDate() + "/" + item.time.getUTCMonth() + "/" + item.time.getUTCFullYear()}
                 {item.category == "lavoro" && <Pickaxe />}
                 {item.category == "svago" && <Volleyball />}
 
