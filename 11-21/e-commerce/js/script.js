@@ -76,6 +76,7 @@ const catalog = [
 
 document.addEventListener("DOMContentLoaded", (event) => {
     showCatalog();
+    updateCart();
 });
 
 //CARRELLO
@@ -141,15 +142,21 @@ const addToCart = (id) => {
 };
 
 const updateCart = () => {
+    const cartDiv = document.querySelector(".cart");
+    if (cart.length < 1) {
+        cartDiv.innerHTML = `
+            <div> Carrello Vuoto</div>
+        `;
+        return;
+    }
     const cartItems = cart
         .map((item) => {
             const product = catalog.find((cat) => cat.id === item.id);
             return product ? { ...product, quantity: item.quantity } : null;
         })
         .filter(Boolean);
-    console.log(cartItems);
+    //console.log(cartItems);
 
-    const cartDiv = document.querySelector(".cart");
     cartDiv.innerHTML = "";
     cartItems.forEach((c) => {
         const div = document.createElement("div");
