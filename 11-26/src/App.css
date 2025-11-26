@@ -1,0 +1,10 @@
+.container {
+    width: 75vw;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
