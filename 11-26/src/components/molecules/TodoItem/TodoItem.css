@@ -1,0 +1,42 @@
+.todoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #e5e5e5;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todoItem:hover {
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.todoItem p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    flex: 1;
+}
+
+.todoItem div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.todoItem button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+.todoItem button:hover {
+    background: #eaeaea;
+}

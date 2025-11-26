@@ -1,3 +1,12 @@
-export function TodoList() {
-    return "LISTA";
+import { TodoItem } from "../../molecules/TodoItem/TodoItem";
+import "./TodoList.css";
+
+export function TodoList({ todoList }) {
+    return (
+        <div className="todoList">
+            {todoList.map((t) => (
+                <TodoItem key={t.text} item={t} />
+            ))}
+        </div>
+    );
 }

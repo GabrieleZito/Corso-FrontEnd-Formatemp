@@ -13,7 +13,7 @@ function App() {
             </nav>
             <main>
                 <TodoForm setTodos={setTodos} />
-                <TodoList />
+                <TodoList todoList={todos} />
             </main>
         </div>
     );
