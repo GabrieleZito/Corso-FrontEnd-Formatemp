@@ -8,9 +8,11 @@ function TodoForm({ setTodos }) {
     const options = ["Scegli Categoria", "Lavoro", "Svago"];
     const [text, setText] = useState("");
     const [category, setCategory] = useState("");
+    const [id, setId] = useState(0);
 
     const addTodo = () => {
-        setTodos((t) => [...t, { text: text, category: category }]);
+        setTodos((t) => [...t, { id: id, text: text, category: category }]);
+        setId((i) => i + 1);
     };
 
     return (

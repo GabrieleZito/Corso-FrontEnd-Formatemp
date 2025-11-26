@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import TodoForm from "./components/organisms/TodoForm/TodoForm";
 import { TodoList } from "./components/organisms/TodoList/TodoList";
+import { FilterGroup } from "./components/molecules/FilterGroup/FilterGroup";
 
 function App() {
     const [todos, setTodos] = useState([]);
@@ -13,6 +14,7 @@ function App() {
             </nav>
             <main>
                 <TodoForm setTodos={setTodos} />
+                <FilterGroup />
                 <TodoList todoList={todos} />
             </main>
         </div>
