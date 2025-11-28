@@ -6,6 +6,9 @@ import { FilterGroup } from "./components/molecules/FilterGroup/FilterGroup";
 
 function App() {
     const [todos, setTodos] = useState([]);
+    const [timeFilter, setTimeFilter] = useState("ASC");
+    const [catFilter, setCatFilter] = useState("");
+
     return (
         <div className="container">
             <nav>
