@@ -1,11 +1,12 @@
 import { useState } from "react";
 import "./UserNotifications.css";
 
-export default function UserNotifications({ notifiche }) {
+export default function UserNotifications({ notifiche, setUser }) {
     const [showNotifications, setShowNotifications] = useState(false);
 
     const handleShownotifications = () => {
         setShowNotifications(!showNotifications);
+        setUser(user => ({...user, notifications: []}))
     };
 
     return (
@@ -18,7 +19,7 @@ export default function UserNotifications({ notifiche }) {
             </div>
             <div>
                 {showNotifications ? (
-                    <div>{notifiche.length > 0 ? notifiche.map((n) => <p key={n}>{n}</p>) : "Non ci sono notifiche"}</div>
+                    <div>{notifiche.length > 0 ? notifiche.map((n) => <p key={n}> {n} </p>) : "Non ci sono notifiche"}</div>
                 ) : (
                     ""
                 )}

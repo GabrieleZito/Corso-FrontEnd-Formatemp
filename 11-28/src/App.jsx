@@ -22,7 +22,6 @@ function App() {
 
     const handleChangeStatus = () => {
         let newStatus = "";
-
         if (user.status == "basic") {
             newStatus = "premium";
         } else newStatus = "basic";
@@ -33,7 +32,12 @@ function App() {
     return (
         <div className="container">
             {user ? (
-                <UserDashboard user={user} handleLogout={handleLogout} handleChangeStatus={handleChangeStatus} />
+                <UserDashboard
+                    user={user}
+                    setUser={setUser}
+                    handleLogout={handleLogout}
+                    handleChangeStatus={handleChangeStatus}
+                />
             ) : (
                 <div>
                     <button onClick={handleLogin}>LOGIN</button>
