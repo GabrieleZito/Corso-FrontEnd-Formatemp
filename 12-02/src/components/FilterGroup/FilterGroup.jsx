@@ -1,10 +1,15 @@
 import "./FilterGroup.css";
 
-function FilterGroup({ genres, platforms, filters, setFilters }) {
+function FilterGroup({ genres, platforms, filters, setFilter, resetFilters }) {
     const { search, genre, platform, rating } = filters;
 
     const onChangeFilter = (field, value) => {
-        setFilters((f) => ({ ...f, [field]: value }));
+        setFilter(field, value);
+    };
+
+    const onSelectCategory = (category) => {
+        resetFilters();
+        setFilter("status", category);
     };
 
     return (
@@ -53,11 +58,21 @@ function FilterGroup({ genres, platforms, filters, setFilters }) {
             </div>
 
             <div className="filter-buttons">
-                <button className="status-btn">Tutti</button>
-                <button className="status-btn">Completati</button>
-                <button className="status-btn">In Corso</button>
-                <button className="status-btn">Wishlist</button>
-                <button className="status-btn">Abbandonati</button>
+                <button className="status-btn" onClick={() => onSelectCategory("all")}>
+                    Tutti
+                </button>
+                <button className="status-btn" onClick={() => onSelectCategory("completato")}>
+                    Completati
+                </button>
+                <button className="status-btn" onClick={() => onSelectCategory("in corso")}>
+                    In Corso
+                </button>
+                <button className="status-btn" onClick={() => onSelectCategory("wishlist")}>
+                    Wishlist
+                </button>
+                <button className="status-btn" onClick={() => onSelectCategory("abbandonato")}>
+                    Abbandonati
+                </button>
             </div>
         </div>
     );
