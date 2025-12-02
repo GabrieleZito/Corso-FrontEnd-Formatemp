@@ -9,7 +9,7 @@ export const mockData = [
         voto: 9.7,
         stato: "completato",
         ore_giocate: 120,
-        difficoltà: "difficile",
+        difficolta: "difficile",
         cover: "https://gaming-cdn.com/images/products/4824/616x353/elden-ring-pc-steam-cover.jpg?v=1750231653",
     },
     {
@@ -22,7 +22,7 @@ export const mockData = [
         voto: 9.5,
         stato: "completato",
         ore_giocate: 55,
-        difficoltà: "media",
+        difficolta: "media",
         cover: "https://gaming-cdn.com/images/products/16797/616x353/god-of-war-ragnarok-pc-steam-cover.jpg?v=1755004824",
     },
     {
@@ -35,7 +35,7 @@ export const mockData = [
         voto: 9.8,
         stato: "in corso",
         ore_giocate: 40,
-        difficoltà: "media",
+        difficolta: "media",
         cover: "https://gaming-cdn.com/images/products/4860/616x353/the-legend-of-zelda-tears-of-the-kingdom-switch-gioco-nintendo-eshop-europe-cover.jpg?v=1748959308",
     },
     {
@@ -48,7 +48,7 @@ export const mockData = [
         voto: 8.7,
         stato: "completato",
         ore_giocate: 90,
-        difficoltà: "media",
+        difficolta: "media",
         cover: "https://gaming-cdn.com/images/products/3578/616x353/cyberpunk-2077-xbox-one-xbox-series-x-s-gioco-microsoft-store-europe-cover.jpg?v=1748447637",
     },
     {
@@ -61,7 +61,7 @@ export const mockData = [
         voto: 9.2,
         stato: "completato",
         ore_giocate: 50,
-        difficoltà: "difficile",
+        difficolta: "difficile",
         cover: "https://gaming-cdn.com/images/products/5972/616x353/hades-pc-mac-gioco-steam-cover.jpg?v=1670573156",
     },
     {
@@ -74,7 +74,7 @@ export const mockData = [
         voto: 9.0,
         stato: "in corso",
         ore_giocate: 300,
-        difficoltà: "variabile",
+        difficolta: "variabile",
         cover: "https://gaming-cdn.com/images/products/2369/616x353/minecraft-xbox-one-gioco-microsoft-store-cover.jpg?v=1732008081",
     },
     {
@@ -87,7 +87,7 @@ export const mockData = [
         voto: 8.0,
         stato: "in corso",
         ore_giocate: 200,
-        difficoltà: "media",
+        difficolta: "media",
         cover: "https://gaming-cdn.com/images/products/2500/616x353/fortnite-pc-epic-games-cover.jpg?v=1759399279",
     },
     {
@@ -100,7 +100,7 @@ export const mockData = [
         voto: 9.6,
         stato: "completato",
         ore_giocate: 85,
-        difficoltà: "media",
+        difficolta: "media",
         cover: "https://gaming-cdn.com/images/products/5679/616x353/red-dead-redemption-2-pc-gioco-rockstar-cover.jpg?v=1713793245",
     },
     {
@@ -113,7 +113,7 @@ export const mockData = [
         voto: 9.3,
         stato: "in corso",
         ore_giocate: 120,
-        difficoltà: "facile",
+        difficolta: "facile",
         cover: "https://gaming-cdn.com/images/products/7233/616x353/stardew-valley-xbox-one-gioco-microsoft-store-europe-cover.jpg?v=1738083567",
     },
     {
@@ -126,7 +126,7 @@ export const mockData = [
         voto: 9.1,
         stato: "completato",
         ore_giocate: 70,
-        difficoltà: "molto difficile",
+        difficolta: "molto difficile",
         cover: "https://gaming-cdn.com/images/products/857/616x353/dark-souls-3-pc-gioco-steam-cover.jpg?v=1703156780",
     },
 ];

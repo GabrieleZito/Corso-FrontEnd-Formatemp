@@ -3,7 +3,7 @@ import "./GameCard.css";
 function GameCard({ game }) {
     const { id, titolo, genere, piattaforma, prezzo, anno_di_uscita, voto, stato, ore_giocate, difficolta, cover } = game;
     return (
-        <div className="game-card gamer-card">
+        <div className="game-card">
             <div className="glow-border"></div>
             <img src={cover} alt={titolo} className="game-cover" />
 
