@@ -14,22 +14,6 @@
     box-shadow: 0 0 45px rgba(0, 255, 255, 0.6);
 }
 
-/* Glow border animated */
-.glow-border {
-    position: absolute;
-    inset: 0;
-    border-radius: 18px;
-    padding: 2px;
-    background: linear-gradient(45deg, #00eaff, #0085ff, #9d00ff, #ff0099, #ff0000);
-    background-size: 300% 300%;
-    animation: glowMove 4s linear infinite;
-    z-index: 1;
-    filter: blur(4px);
-    opacity: 0.5;
-}
-
-
-
 .game-card img,
 .game-info {
     position: relative;
