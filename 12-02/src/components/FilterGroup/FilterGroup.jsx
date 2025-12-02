@@ -8,44 +8,56 @@ function FilterGroup({ genres, platforms, filters, setFilters }) {
     };
 
     return (
-        <div>
-            <div>
-                <div>
-                    <input value={search} type="text" onChange={(e) => onChangeFilter("search", e.target.value)} />
-                </div>
-                <div>
-                    <select value={genre} onChange={(e) => onChangeFilter("genre", e.target.value)}>
-                        <option value={"all"}>Tutti (Genere)</option>
-                        {genres.map((g) => (
-                            <option key={g} value={g.toLowerCase()}>
-                                {g}
-                            </option>
-                        ))}
-                    </select>
-                    <select value={platform} onChange={(e) => onChangeFilter("platform", e.target.value)}>
-                        <option value={"all"}>Tutti (Platform)</option>
-                        {platforms.map((g) => (
-                            <option key={g} value={g.toLowerCase()}>
-                                {g}
-                            </option>
-                        ))}
-                    </select>
-                    <input
-                        type="range"
-                        min="0"
-                        max="10"
-                        step="0.1"
-                        value={rating}
-                        onChange={(e) => onChangeFilter("rating", e.target.value)}
-                    />
-                </div>
+        <div className="filter-group">
+            <div className="filter-row">
+                <input
+                    className="search-input"
+                    placeholder="Cerca un gioco..."
+                    value={search}
+                    type="text"
+                    onChange={(e) => onChangeFilter("search", e.target.value)}
+                />
             </div>
-            <div>
-                <button>Tutti</button>
-                <button>Completati</button>
-                <button>In Corso</button>
-                <button>Wishlist</button>
-                <button>Abbandonati</button>
+
+            <div className="filter-row selects">
+                <select className="gamer-select" value={genre} onChange={(e) => onChangeFilter("genre", e.target.value)}>
+                    <option value={"all"}>Tutti i Generi</option>
+                    {genres.map((g) => (
+                        <option key={g} value={g.toLowerCase()}>
+                            {g}
+                        </option>
+                    ))}
+                </select>
+
+                <select className="gamer-select" value={platform} onChange={(e) => onChangeFilter("platform", e.target.value)}>
+                    <option value={"all"}>Tutte le Piattaforme</option>
+                    {platforms.map((p) => (
+                        <option key={p} value={p.toLowerCase()}>
+                            {p}
+                        </option>
+                    ))}
+                </select>
+            </div>
+
+            <div className="filter-row slider-row">
+                <label className="slider-label">Voto minimo: {rating}</label>
+                <input
+                    className="gamer-slider"
+                    type="range"
+                    min="0"
+                    max="10"
+                    step="0.1"
+                    value={rating}
+                    onChange={(e) => onChangeFilter("rating", e.target.value)}
+                />
+            </div>
+
+            <div className="filter-buttons">
+                <button className="status-btn">Tutti</button>
+                <button className="status-btn">Completati</button>
+                <button className="status-btn">In Corso</button>
+                <button className="status-btn">Wishlist</button>
+                <button className="status-btn">Abbandonati</button>
             </div>
         </div>
     );

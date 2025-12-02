@@ -1,0 +1,114 @@
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px;
+    background: #0c0c0c;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0,255,255,0.15);
+}
+
+/* ROW */
+.filter-row {
+    display: flex;
+    gap: 12px;
+}
+
+
+/* SEARCH INPUT */
+.search-input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 255, 255, 0.07);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 10px;
+    color: #00eaff;
+    font-size: 15px;
+    outline: none;
+    transition: 0.25s;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 10px #00eaff;
+}
+
+/* SELECT */
+.gamer-select {
+    flex: 1;
+    padding: 10px;
+    background: rgba(157, 0, 255, 0.1);
+    border: 1px solid rgba(157, 0, 255, 0.4);
+    border-radius: 10px;
+    color: #e0caff;
+    font-size: 14px;
+    text-shadow: 0 0 6px rgba(157, 0, 255, 0.5);
+    outline: none;
+    transition: 0.25s;
+}
+
+.gamer-select:hover {
+    box-shadow: 0 0 12px rgba(157, 0, 255, 0.7);
+}
+
+/* SLIDER */
+.slider-row {
+    flex-direction: column;
+    gap: 5px;
+}
+
+.slider-label {
+    color: #ff0099;
+    font-size: 14px;
+    text-shadow: 0 0 6px rgba(255, 0, 153, 0.7);
+}
+
+.gamer-slider {
+    appearance: none;
+    height: 6px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #00eaff, #9d00ff);
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,255,255,0.3);
+}
+
+.gamer-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #00eaff;
+    box-shadow: 0 0 15px #00eaff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.gamer-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* STATUS BUTTONS */
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.status-btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 0, 153, 0.12);
+    border: 1px solid rgba(255, 0, 153, 0.4);
+    color: #ff33bb;
+    font-size: 13px;
+    cursor: pointer;
+    text-shadow: 0 0 6px rgba(255, 0, 153, 0.7);
+    transition: 0.25s;
+}
+
+.status-btn:hover {
+    box-shadow: 0 0 16px rgba(255, 0, 153, 0.9);
+    transform: translateY(-3px);
+}
