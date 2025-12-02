@@ -3,18 +3,27 @@ import { mockData } from "./data/mockData";
 
 import "./App.css";
 import GameCard from "./components/GameCard/GameCard";
+import FilterGroup from "./components/FilterGroup/FilterGroup";
 
 function App() {
     const games = mockData;
+    const genres = [...new Set(games.map((g) => g.genere))];
+    const platforms = [...new Set(games.map((g) => g.piattaforma))];
+    const [filters, setFilters] = useState({});
 
+    const [filteredGames, setFilteredGames] = useState(games);
     return (
         <>
             <div>
-                <header>🎮 Gamehub</header>
-                <nav></nav>
+                <header>
+                    🎮 Gamehub {games.length} gioc{games.length > 0 ? "hi" : "o"}
+                </header>
+                <nav>
+                    <FilterGroup genres={genres} platforms={platforms} />
+                </nav>
                 <main>
                     <div className="game-grid">
-                        {games.map((g) => (
+                        {filteredGames.map((g) => (
                             <GameCard key={g.id} game={g} />
                         ))}
                     </div>
