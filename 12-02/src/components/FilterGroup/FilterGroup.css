@@ -6,7 +6,7 @@
     background: #0c0c0c;
     border-radius: 14px;
     box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
-    border: 1px solid rgba(0,255,255,0.15);
+    border: 1px solid rgba(0, 255, 255, 0.15);
 }
 
 /* ROW */
@@ -14,7 +14,6 @@
     display: flex;
     gap: 12px;
 }
-
 
 /* SEARCH INPUT */
 .search-input {
@@ -70,7 +69,7 @@
     background: linear-gradient(90deg, #00eaff, #9d00ff);
     outline: none;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0,255,255,0.3);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
 }
 
 .gamer-slider::-webkit-slider-thumb {
@@ -111,4 +110,87 @@
 .status-btn:hover {
     box-shadow: 0 0 16px rgba(255, 0, 153, 0.9);
     transform: translateY(-3px);
+}
+
+/* ─────────────────────────────
+   ACCORDION
+────────────────────────────── */
+
+.accordion {
+    margin-top: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 255, 255, 0.18);
+    background: rgba(0, 255, 255, 0.05);
+}
+
+/* HEADER */
+.accordion-header {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(0, 255, 255, 0.12);
+    border: none;
+    color: #00eaff;
+    font-family: "Orbitron";
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+    transition: 0.25s;
+}
+
+.accordion-header:hover {
+    background: rgba(0, 255, 255, 0.18);
+}
+
+.arrow {
+    transition: transform 0.25s ease;
+}
+
+.arrow.open {
+    transform: rotate(180deg);
+}
+
+/* BODY */
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 16px;
+    transition: max-height 0.35s ease;
+}
+
+.accordion-body.open {
+    max-height: 400px;
+    padding: 16px;
+}
+
+/* GRID STATISTICHE */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.stat-box {
+    padding: 12px;
+    background: rgba(157, 0, 255, 0.12);
+    border: 1px solid rgba(157, 0, 255, 0.4);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(157, 0, 255, 0.3);
+}
+
+.stat-box h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #00eaff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.stat-box p {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #ff33bb;
+    text-shadow: 0 0 6px rgba(255, 0, 153, 0.6);
 }
