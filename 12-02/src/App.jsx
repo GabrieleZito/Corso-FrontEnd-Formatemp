@@ -9,7 +9,7 @@ function App() {
     const games = mockData;
     const genres = [...new Set(games.map((g) => g.genere))];
     const platforms = [...new Set(games.map((g) => g.piattaforma))];
-    const [filters, setFilters] = useState({});
+    const [filters, setFilters] = useState({ search: "", genre: "all", platform: "all", rating: 0 });
 
     const [filteredGames, setFilteredGames] = useState(games);
     return (
@@ -19,7 +19,7 @@ function App() {
                     🎮 Gamehub {games.length} gioc{games.length > 0 ? "hi" : "o"}
                 </header>
                 <nav>
-                    <FilterGroup genres={genres} platforms={platforms} />
+                    <FilterGroup genres={genres} platforms={platforms} filters={filters} setFilters={setFilters} />
                 </nav>
                 <main>
                     <div className="game-grid">
