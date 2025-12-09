@@ -15,7 +15,10 @@ function App() {
             },
         };
 
-        fetch("https://api.themoviedb.org/3/authentication", options)
+        fetch(
+            "https://api.themoviedb.org/3/account/21519630/favorite/tv?language=it-IT&page=1&sort_by=created_at.asc",
+            options
+        )
             .then((res) => res.json())
             .then((res) => console.log(res))
             .catch((err) => console.error(err));
